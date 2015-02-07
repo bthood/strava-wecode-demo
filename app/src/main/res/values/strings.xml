@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Segment Explorer Demo</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="loading">Please wait…</string>
+
+    <string name="segment_list_title">Segment List</string>
+    <string name="segment_list_error">Error loading Segments from Strava API</string>
 </resources>
