@@ -45,7 +45,7 @@ public class GetSegmentsTask extends AsyncTask<Void, Void, List<Segment>> {
             URL api = new URL(SEGMENT_EXPORE_URL);
             HttpsURLConnection connection = (HttpsURLConnection) api.openConnection();
             connection.setRequestMethod("GET");
-            connection.setRequestProperty("Authorization", "access_token XXX"); // TODO: access token!
+            connection.setRequestProperty("Authorization", "access_token 12e3c07bd976c6904087a70094ccb6b905e3d13e");
 
             // Wait for the result and check if successful. A 20x response code indicates success.
             if (connection.getResponseCode() / 100 == 2) {

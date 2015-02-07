@@ -2,10 +2,12 @@ package com.strava.segmentexplorerdemo;
 
 import android.support.v4.util.Pair;
 
+import java.io.Serializable;
+
 /**
  * Represents the data returned by the Strava Segment Explore API.
  */
-public class Segment {
+public class Segment implements Serializable {
 
     private long id;
     private String name;

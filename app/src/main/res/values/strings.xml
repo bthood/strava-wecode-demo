@@ -5,4 +5,8 @@
 
     <string name="segment_list_title">Segment List</string>
     <string name="segment_list_error">Error loading Segments from Strava API</string>
+    <string name="title_activity_segment_detail">SegmentDetailActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 </resources>

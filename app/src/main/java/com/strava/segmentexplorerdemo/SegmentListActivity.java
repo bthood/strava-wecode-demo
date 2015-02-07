@@ -1,9 +1,12 @@
 package com.strava.segmentexplorerdemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -36,6 +39,14 @@ public class SegmentListActivity extends ActionBarActivity implements SegmentsRe
         mSegmentListAdapter = new SegmentListAdapter();
         ListView segmentListView = (ListView) findViewById(R.id.segment_list);
         segmentListView.setAdapter(mSegmentListAdapter);
+        segmentListView.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(SegmentListActivity.this, SegmentDetailActivity.class);
+                intent.putExtra("segment", mSegmentListAdapter.getItem(position));
+                startActivity(intent);
+            }
+        });
     }
 
     /** This code is executed whenever the user navigates back to the screen. */
